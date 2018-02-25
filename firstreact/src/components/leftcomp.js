@@ -14,6 +14,12 @@ class LeftComp extends Component {
     }
 
     render() {
+
+        const isEnabled =
+            this.state.name.length > 0 &&
+            this.state.details.length > 0 &&
+            this.state.range.length > 0;
+
         return (
             <div className="custom mh-100 col-md-5 px-5 pb-5 m-5">
                 <div class="alert alert-primary p-4" role="alert">
@@ -57,14 +63,14 @@ class LeftComp extends Component {
                         />
                     </div>
                 </div>
-                <button className="btn btn-primary float-right" onClick={() => this.onAdd()}>Add</button>
+                <button disabled={!isEnabled} className="btn btn-primary float-right" onClick={() => this.onAdd()}>Add</button>
 
             </div>
         );
     }
 
-    onAdd() {
 
+    onAdd() {
         if (this.state.name !== '' && this.state.details !== '' && this.state.range !== '') {
             this.props.onAdd(this.state);
             this.setState({
