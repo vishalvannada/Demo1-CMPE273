@@ -13,9 +13,9 @@ class RightComp extends Component {
                     <ul className="list-group list-group-flush">
                         {this.props.name.map((project) =>
                             <div className="border border-primary">
-                                <li className="list-group-item p-2">Name : {project.name}</li>
-                                <li className="list-group-item p-2">Details : {project.details}</li>
-                                <li className="list-group-item p-2">Range : {project.range}</li>
+                                <li className="list-group-item p-1">Name : {project.name}</li>
+                                <li className="list-group-item p-1">Details : {project.details}</li>
+                                <li className="list-group-item p-1">Range : {project.range}</li>
                             </div>
                         )}
                     </ul>

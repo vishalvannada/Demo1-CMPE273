@@ -10,15 +10,12 @@ class LeftComp extends Component {
             name: '',
             details: '',
             range: '',
-            togglename : false,
-            toggledetails : false,
-            togglerange : false
         };
     }
 
     render() {
         return (
-            <div className="custom mh-100 col-md-5 px-5 pt-3 pb-5 m-5 border border-primary">
+            <div className="custom mh-100 col-md-5 px-5 pb-5 m-5">
                 <div class="alert alert-primary p-4" role="alert">
                     <h1>Enter Your Project</h1>
                 </div>
@@ -33,11 +30,10 @@ class LeftComp extends Component {
                             onChange={event => this.setState({name: event.target.value})}
                         />
                     </div>
+                    {/*<small className="error col-sm-2"></small>*/}
+                    {/*<small className="error pt-1 col-sm-9 float-right text-danger">Please Enter the name of the Project*/}
+                    {/*</small>*/}
                 </div>
-
-                {/*<div className="form-group row">*/}
-                    {/*<span className="col-sm-12">Vishal</span>*/}
-                {/*</div>*/}
 
                 <div className="form-group row">
                     <label for="Details" className="col-sm-2 col-form-label">Details</label>
@@ -78,30 +74,9 @@ class LeftComp extends Component {
             });
         }
         else {
-            if(this.state.name === ''){
-                this.setState({
-                    togglename : true,
-                })
-            }
-
-            if(this.state.details === ''){
-                this.setState({
-                    toggledetails : true,
-                })
-            }
-
-            if(this.state.range === ''){
-                this.setState({
-                    togglerange : true,
-                })
-            }
             swal('Please Enter all the details!');
         }
-
-
     }
-
-
 }
 
 export default LeftComp;
