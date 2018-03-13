@@ -1,3 +1,3 @@
 # firstReact
 
-Appending Project to Project List
+Appending a Project to Projects List, don't reload the page.
